@@ -12,7 +12,7 @@
     <img height="400px" src="../Assignment1/about2.jpeg" alt=""><br>
     <hr>
     <br>
-    <h3>About Me</h3>
+    <h3>About me</h3>
     <p>I’ve recently completed my Master of Computer Applications (MCA) from Kurukshetra University.</p>
     <p>My passion for technology extends far beyond academics—I'm driven by the potential of code to solve real-world problems and build meaningful digital experiences. <br> Whether it's developing responsive web applications or experimenting with new frameworks and tools, I’m always eager to explore, learn, and innovate.</p>
     <p>When I’m not immersed in development, I enjoy spending time on the badminton court, diving into cinematic masterpieces, and cheering for thrilling cricket matches. <br> These interests keep me balanced and bring a unique creative energy to my approach as a developer.</p>
@@ -83,7 +83,7 @@
     <b><p>Location</p></b>
     <p>Panipat, Haryana, India</p>
     <br>
-    <center>
+    
     <form action="">
         <fieldset>
             <legend>Contact Me</legend>
@@ -93,13 +93,49 @@
             <input type="email" name="" id="" placeholder="Your Email"><br><br>
             <textarea name="" id=""  placeholder="Your Message"></textarea><br><br>
             <input type="submit" value="Send Message">
+            <br>
+            <p><b>Are you a:</b></p>
+            <input type="radio" name="usertype" id="student" value="Student">
+            <label for="student">Student</label>
+            <input type="radio" name="usertype" id="developer" value="Developer">
+            <label for="developer">Developer</label>
+            <input type="radio" name="usertype" id="client" value="Client">
+            <label for="client">Client</label>
+            <br><br>
+
+            <!--
+                checkbox
+            -->
+
+            <p><b>Interested in:</b></p>
+            <input type="checkbox" name="interest" id="webdev" value="Web Development">
+            <label for="webdev">Web Development</label><br>
+            <input type="checkbox" name="interest" id="uiux" value="UI/UX Design">
+            <label for="uiux">UI/UX</label><br>
+            <input type="checkbox" name="interest" id="consulting" value="Consulting">
+            <label for="consulting">Consulting</label>
+            <br><br>
+
+            <!--
+                Select dropdown
+            -->
+
+            <p><b>Select your project type:</b></p>
+            <select name="projectType" id="projectType">
+                <option value="">Select</option>
+                <option value="personal">Personal Project</option>
+                <option value="startup">Startup</option>
+                <option value="freelance">Freelance/CLient Work</option>
+            </select>
+
+            <input type="submit" value="Send Message">
         </fieldset>
     </form>
     
     <br>
     <hr>
     <br>
-    <p>&copy; 2025 All rights are reserved.</p></center>
+    <center><p>&copy; 2025 All rights are reserved.</p></center>
     
 </body>
 </html>
