@@ -6,7 +6,7 @@
     font-family: "Nata Sans", sans-serif;
 }
 body{
-    background:linear-gradient(rgb(3, 3, 44),rgba(27, 4, 44, 0.849),rgb(9, 9, 9));
+    background:linear-gradient(rgb(31, 56, 69),rgb(65, 50, 75),rgb(48, 46, 49));
     color: white;
 
 }
@@ -16,10 +16,10 @@ html{
 header{
     width:100%;
     min-height: 10vh;
-    background-color: rgba(72, 72, 178);
+    background-color:rgb(0, 0, 0);
     border-bottom: 1px solid rgb(255, 255, 255);
     position: fixed;
-    
+    z-index: 2;
     box-shadow: 0px 0px 10px;
 }
 nav{
@@ -28,6 +28,7 @@ nav{
     align-items: center;
     padding: 1rem;
     gap:2rem;
+
 }
 ul{
     display: flex;
@@ -52,12 +53,12 @@ a{
     color: white;
 }
 .logo{
-    background-color:rgba(47, 124, 162, 0.579);
+    background-color:rgb(20, 70, 118);
     border-radius: 10px;
     padding: 1.2rem;
     font-weight: 800;
     margin: 0.5rem;
-    box-shadow: 0px 0px 15px rgba(215, 209, 209, 0.7);
+    box-shadow: 0px 0px 15px rgb(215, 209, 209);
     font-size: 20px;
     
 }
@@ -69,6 +70,7 @@ a{
     align-items: center;
     min-height: 100vh;
     gap:2rem;
+    margin-bottom: 18vh;;
 }
 .first{
     display: block;
@@ -139,8 +141,6 @@ h3::after {
     justify-content: center;
     align-items: center;
     min-height: 75vh;
-    
-    
 }
 .img2{
     display: flex;
@@ -160,7 +160,7 @@ h3::after {
 
 .Skills{
     min-width: 100vh;
-    margin-bottom: 22vh;;
+    margin-bottom: 20vh;;
 }
 
 .Skillsdiv{
@@ -169,8 +169,8 @@ grid-template-columns: 1fr 1fr 1fr;
 font-size: 28px;
 gap:2rem;
 margin-top: 2rem;
-margin-left: 10%;
-margin-right: 10%;
+margin-left: 9%;
+margin-right: 9%;
 }
 
 .Skill{
@@ -202,8 +202,7 @@ margin-right: 10%;
     left: 0px;
     width: 100%;
     height: 100%;
-    opacity: 0;
-    transition: opacity 0.3s;
+
 }
 .Skill-name{
     font-size: 1.3rem;
@@ -221,7 +220,7 @@ margin-right: 10%;
 .Projects{
     min-height: 100vh;
     margin-top: 15vh;
-    margin-bottom: 22vh;
+    margin-bottom: 18vh;
 }
 
 .Cards{
@@ -259,73 +258,146 @@ margin-right: 10%;
     opacity: 1;
 }
 
-.Contact{
-    margin-top: 20vh;
-    margin-right: 5%;
+.Contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 0px 8%;
+    margin-bottom: 20vh;
 }
-.Contact h3{
-    margin-bottom: 2rem;
-}
-.Contact p{
-    width: 70%;
-}
-.Add{
-    font-size: 1.1rem;
-    line-height: 1.5;
-    margin-left:10%;
+
+.Contact h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 30px;
 }
 
 
-form{
-    
+.Contact .left {
+    flex: 1;
+    min-width: 280px;
+    max-width: 600px;
+}
+
+.Contact .Add h4 {
+    font-size: 1.4rem;
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+.Contact .Add p {
+    font-size: 1rem;
+    color: #ffffff;
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
+.Contact .Add b {
+    color: #2c3e50;
+}
+
+
+.Contact .right {
+    flex: 1;
+    min-width: 320px;
+}
+
+.ContactMe {
+    background: #000000;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.ContactMe fieldset {
+    border: none;
+}
+
+.ContactMe legend {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #a6c0da;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Inputs */
+.ContactMe input[type="text"],
+.ContactMe input[type="email"],
+.ContactMe textarea,
+.ContactMe select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 15px 0;
+    background-color: #1f2b36;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.ContactMe input[type="text"]:focus,
+.ContactMe input[type="email"]:focus,
+.ContactMe textarea:focus,
+.ContactMe select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 6px rgba(52,152,219,0.3);
+}
+
+.ContactMe textarea {
+    resize: none;
+    min-height: 100px;
+}
+
+/* Labels, Radio, Checkbox */
+.ContactMe p {
+    margin: 12px 0 6px;
+    font-weight: bold;
+    color: #7092b5;
+}
+
+.ContactMe label {
+    margin-left: 5px;
+    margin-right: 15px;
+    font-size: 0.95rem;
+    color: #4d667f;
+}
+
+.ContactMe input[type="radio"],
+.ContactMe input[type="checkbox"] {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Submit Button */
+.ContactMe input[type="submit"] {
+    width: 100%;
+    background: #3498db;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.ContactMe input[type="submit"]:hover {
+    background: #2980b9;
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+footer p{
     font-size: 16px;
-    margin-left: 10%;
-    padding: 1rem;
-    margin-bottom: 10vh;
-    
-}       
-input{
-    width: 50%;
-    border-radius: 5px;
-    padding: 1rem;
-    background-color: rgb(0, 0, 0);
-    opacity: 0.5;
-    border: 2px solid black;
-}
-legend{
-    font-size: 20px;
-    border: 2px solid rgb(124, 11, 11);
-    border-radius: 5px;
-    padding: 0.25rem;
-    
-    color: red;
-}
-fieldset{
-    border-radius: 5px;
-    border: 2px solid red;
-    padding: 1rem;
-    margin: 0.25rem;
-
-}
-input::placeholder{
-    color: rgb(255, 255, 255);
-}
-textarea{
-    width: 50%;
-    border-radius: 5px;
-    padding: 1rem;
-    background-color: rgb(0, 0, 0);
-    opacity: 0.5;
-    border: 2px solid black;
-}
-textarea::placeholder{
-    color: rgb(255, 255, 255);
-}
-
-input[type=radio]{
-    color: red;
-    background-color: red;
-}
-input[type=submit]{
-    color:white;
+    font-weight: 600;
 }
