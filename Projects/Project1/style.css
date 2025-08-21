@@ -212,6 +212,7 @@ button{
     justify-content: center;
     align-items: center;
     margin: 1rem;
+    padding-top:3vh ;
 }
 
 .card{
@@ -259,20 +260,8 @@ button{
     padding-top: 15vh;
     height: 100vh;
     width: 100%;
+    margin-bottom: 10vh;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .contact{
     height: 100vh;
@@ -304,4 +293,19 @@ a{
     padding: 2rem;
     font-size: 20px;
     font-weight: 600;
+}
+.card-line{
+    height: 70%;
+    width: 100%;
+    line-height: 1.5;
+    font-size: 18px;
+    padding: 1rem;
+
+}
+.cardse{
+    height: 60vh;
+    width: 30vw;
+    margin: 2rem;
+    border-radius: 1rem;
+    border: 2px solid white;
 }
