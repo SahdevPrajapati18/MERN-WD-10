@@ -235,7 +235,10 @@ main{
   border-radius: 0.7rem;
 }
 .card-title{
+  height: 100%;
+  width: 100%;
   font-size: 1.3rem;
+  background-color:red;
 }
 .cards-2{
   margin-top: 1rem;
