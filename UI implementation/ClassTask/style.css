@@ -144,9 +144,17 @@ video{
     width: 100%;
     overflow: hidden;
     border-radius:1rem 1rem 0rem 0rem;
-
+    background-position: center;
+}
+.card-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 .card-title{
+
+    height: 55%;
+    width: 100%;
     padding-top: 1rem;
     line-height: 1.5;
     padding-bottom: 1rem;
@@ -155,7 +163,7 @@ video{
 }
 .card-title h3{
     font-size: 1.2rem;
-    color: grey;
+    color: rgb(25, 24, 24);
 }
 .card-title p{
     font-size: 1rem;
