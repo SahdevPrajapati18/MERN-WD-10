@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            gap: 20px;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 2rem;
+            border-radius: 20px;
+        }
+        .child{
+            width: 500px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            color: white;
+            border-radius: 10px;
+            
+        }
+        .result{
+            margin-top: 20px;
+            text-align: center;
+        }
+        button{
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        select{
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .shapes{
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Shape Maker</h1>
+        <div class="child">
+            <label for="ShapeName"><select name="ShapeName" id="">
+                <option value="circle">Circle</option>
+                <option value="rectangle">Rectangle</option>
+                <option value="square">Square</option>
+                <option value="oval">Oval</option>
+                <option value="triangle">Triangle</option></select>
+            </label
+        </div>
+        <div class="child">
+            <label for="color">
+                <input type="color" name="color">
+            </label>
+        </div>
+        <div class="child">
+            <label for="quantity">
+                <select name="quantity" id="">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </label>
+        </div>
+        <div class="child">
+            <button>Generate</button>
+        </div>
+    </div>
+    <div class="result">
+        <h2>Result</h2>
+        <div class="shapes"></div>
+    </div>
+
+    <script>
+        let button = document.querySelector('button');
+        let shapesContainer = document.querySelector('.shapes');
+        button.addEventListener('click', () => {
+            let shapeSelect = document.querySelector('select[name="ShapeName"]');
+            let colorSelect = document.querySelector('input[type="color"]');
+            let quantitySelect = document.querySelector('select[name="quantity"]');
+
+            let shape = shapeSelect.value;
+            let color = colorSelect.value;
+            let quantity = parseInt(quantitySelect.value);
+
+            shapesContainer.innerHTML = ''; 
+
+            for (let i = 0; i < quantity; i++) {
+                let shapeElement = document.createElement('div');
+                shapeElement.style.backgroundColor = color;
+                shapeElement.style.margin = '10px';
+
+                switch (shape) {
+                    case 'circle':
+                        shapeElement.style.width = '100px';
+                        shapeElement.style.height = '100px';
+                        shapeElement.style.borderRadius = '50%';
+                        break;
+                    case 'rectangle':
+                        shapeElement.style.width = '150px';
+                        shapeElement.style.height = '100px';
+                        break;
+                    case 'square':
+                        shapeElement.style.width = '100px';
+                        shapeElement.style.height = '100px';
+                        break;
+                    case 'oval':
+                        shapeElement.style.width = '150px';
+                        shapeElement.style.height = '100px';
+                        shapeElement.style.borderRadius = '50% / 100%';
+                        break;
+                    case 'triangle':
+                        shapeElement.style.width = '0';
+                        shapeElement.style.height = '0';
+                        shapeElement.style.borderLeft = '50px solid transparent';
+                        shapeElement.style.borderRight = '50px solid transparent';
+                        shapeElement.style.borderBottom = `100px solid ${color}`;
+                        shapeElement.style.backgroundColor = 'transparent';
+                        break;
+                }
+
+                shapesContainer.appendChild(shapeElement);
+            }
+        });
+    </script>
+</body>
+</html>
