@@ -1,0 +1,16 @@
+{
+    "editor.inlineSuggest.edits.allowCodeShifting": "always",
+    "editor.inlineSuggest.edits.renderSideBySide": "auto",
+    "editor.inlineSuggest.enabled": true,
+    "editor.inlineSuggest.experimental.triggerCommandOnProviderChange": true,
+    "editor.inlineSuggest.syntaxHighlightingEnabled": true,
+    "emmet.useInlineCompletions": true,
+    "editor.tabCompletion": "on",
+    "emmet.triggerExpansionOnTab": true,
+    "editor.suggest.snippetsPreventQuickSuggestions": true,
+    "editor.suggest.selectionMode": "never",
+    "editor.snippets.codeActions.enabled": false,
+    "editor.snippetSuggestions": "none",
+    "java.completion.postfix.enabled": true,
+    "dart.lspSnippetTextEdits": true
+}

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            gap: 20px;
+            padding: 2rem;
+        }
+        header{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border-radius: 10px;
+        }
+        .logo h2{
+            margin: 0;
+        }
+        .menu a{
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        .menu a:hover{
+            text-decoration: underline;
+        }
+        .cart{
+            font-weight: bold;
+        }
+        .cart a{
+            color: white;
+            text-decoration: none;
+        }
+        #Cart{
+            margin-top: 20px;
+            text-align: center;
+        }
+        .active{
+            display: block;
+        }
+        .page{
+            display: none;
+        }
+        #Products{
+            display: block;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            border-radius: 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            justify-items: center;
+            align-items: start;
+        }
+        .card{
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            width: 400px;
+            text-align: center;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .card-img{
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            background-position: center;
+        }
+        .card img{
+            width: 100%;
+            border-radius: 10px;
+        }
+        .card-title{
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        .card-desc{
+            font-size: 14px;
+            color: #666;
+            flex-grow: 1;
+        }
+        .card-price{
+            font-size: 16px;
+            color: #28a745;
+            font-weight: bold;
+        }
+        .card-action button{
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+        }
+        .card-action button:hover{
+            background-color: #218838;
+        }
+        footer{
+            text-align: center;
+            padding: 10px 0;
+            background-color: #f1f1f1;
+            margin-top: 20px;
+        }
+        footer h3{
+            margin: 0;
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center; margin-bottom: 20px;">Product Catalog</h1>
+        <nav>
+            <div class="logo">
+                <h2>MyStore</h2>
+            </div>
+            <div class="menu">
+                <a href="#" onclick="showPage('Products')">Products</a>
+                <a href="#" onclick="showPage('About')">About</a>
+                <a href="#" onclick="showPage('Contact')">Contact</a>
+            </div>
+            <div class="cart">
+                <a href="#" onclick="showPage('Cart')">Cart (0)</a>
+            </div>
+        </nav>
+    </header>
+
+    
+    <div id="About" class="page">
+    <h1 style="text-align:center; margin-top:50px;">About Us</h1>
+    <p style="text-align:center;">This is the About page.</p>
+</div>
+<div id="Cart" class="page">
+        <h1>Empty</h1>
+</div>
+<div id="Contact" class="page">
+    <h1 style="text-align:center; margin-top:50px;">Contact Us</h1>
+    <p style="text-align:center;">This is the Contact page.</p>
+</div>
+<div id="Products" class="page active">
+    <div class="container">
+        <div class="card">
+            <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1626497764746-6dc36546b388?q=80&w=1026&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product Image">
+            </div>
+            <div class="card-title">
+                Shirts
+            </div>
+            <div class="card-desc">
+                This is a great product.
+            </div>
+            <div class="card-price">
+                $19.99
+            </div>
+            <div class="card-action">
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1699275303942-47957eea44b1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product Image">
+            </div>
+            <div class="card-title">
+                Hoodies
+            </div>
+            <div class="card-desc">
+                This is a great product.
+            </div>
+            <div class="card-price">
+                $19.99
+            </div>
+            <div class="card-action">
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">
+                <img src="https://plus.unsplash.com/premium_photo-1673125287084-e90996bad505?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product Image">
+            </div>
+            <div class="card-title">
+                T-shirts
+            </div>
+            <div class="card-desc">
+                This is a great product.
+            </div>
+            <div class="card-price">
+                $19.99
+            </div>
+            <div class="card-action">
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">
+                <img src="https://plus.unsplash.com/premium_photo-1679056833721-d278c22b468d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product Image">
+            </div>
+            <div class="card-title">
+                Check-Shirts
+            </div>
+            <div class="card-desc">
+                This is a great product.
+            </div>
+            <div class="card-price">
+                $19.99
+            </div>
+            <div class="card-action">
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1634449277780-81ab99e85416?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product Image">
+            </div>
+            <div class="card-title">
+                Cosmetic Cream
+            </div>
+            <div class="card-desc">
+                This is a great product.
+            </div>
+            <div class="card-price">
+                $19.99
+            </div>
+            <div class="card-action">
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1582142407894-ec85a1260a46?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product Image">
+            </div>
+            <div class="card-title">
+                Glasses
+            </div>
+            <div class="card-desc">
+                This is a great product.
+            </div>
+            <div class="card-price">
+                $19.99
+            </div>
+            <div class="card-action">
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1630512979275-9623b4a54589?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product Image">
+            </div>
+            <div class="card-title">
+                Chanel
+            </div>
+            <div class="card-desc">
+                This is a great product.
+            </div>
+            <div class="card-price">
+                $19.99
+            </div>
+            <div class="card-action">
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1587017539504-67cfbddac569?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product Image">
+            </div>
+            <div class="card-title">
+                Perfume
+            </div>
+            <div class="card-desc">
+                This is a great product.
+            </div>
+            <div class="card-price">
+                $19.99
+            </div>
+            <div class="card-action">
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1592842233678-11fae6eaf75c?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product Image">
+            </div>
+            <div class="card-title">
+                Coco Noir
+            </div>
+            <div class="card-desc">
+                This is a great product.
+            </div>
+            <div class="card-price">
+                $19.99
+            </div>
+            <div class="card-action">
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <footer>
+        <h3>
+            &copy; 2024 MyStore. All rights reserved.
+        </h3>
+    </footer>
+    <script>
+        let buttons = document.querySelectorAll('.card-action button');
+        let cartCount = 0;
+        let cartLink = document.querySelector('.cart a');
+
+        buttons.forEach(buttons =>{
+            buttons.addEventListener('click',function()
+            {
+                cartCount++;
+                cartLink.textContent = `Cart (${cartCount})`;
+                let toast = document.createElement('div');
+                toast.textContent = 'Item added to cart!';
+                toast.style.position = 'fixed';
+                toast.style.top = '20px';
+                toast.style.right = '20px';
+                toast.style.background = '#28a745';
+                toast.style.color = 'white';
+                toast.style.padding = '10px';
+                toast.style.borderRadius = '5px';
+                document.body.appendChild(toast);
+                setTimeout(() => toast.remove(), 2000);
+            })
+        });
+
+
+        function showPage(pageId){
+            document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
