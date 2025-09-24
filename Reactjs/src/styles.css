@@ -1,0 +1,10 @@
+:root{ --bg:#f6f7fb; --card:#fff; --accent:#28a745 }
+body{ font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:var(--bg); margin:0; padding:20px; }
+.app{ max-width:900px; margin:0 auto; }
+header{ margin-bottom:12px }
+textarea{ width:100%; padding:12px; border-radius:8px; border:1px solid #ddd; font-size:15px }
+.controls{ display:flex; gap:12px; flex-wrap:wrap; margin-top:12px }
+.controls label{ display:flex; flex-direction:column; font-size:13px }
+.actions{ margin-top:12px }
+button{ background:var(--accent); color:#fff; border:none; padding:10px 14px; border-radius:8px; cursor:pointer; margin-right:8px }
+.note{ margin-top:10px; color:#666; font-size:13px }
