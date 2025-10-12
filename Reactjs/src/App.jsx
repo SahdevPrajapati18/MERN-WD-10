@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 
 export default function App(){
-  const [text, setText] = useState('')
+  const [text, setText] = useState('Hello, welcome to React Text to Speech!')
   const [rate, setRate] = useState(1)
   const [pitch, setPitch] = useState(1)
   const [volume, setVolume] = useState(1)
