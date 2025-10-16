@@ -7,5 +7,9 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.9.0",
+    "react-redux": "^9.2.0"
+  }
 }
